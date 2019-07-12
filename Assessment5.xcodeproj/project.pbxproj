@@ -13,6 +13,10 @@
 		7C3E3E7C22D8DA3C005F9D85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3E3E7A22D8DA3C005F9D85 /* LaunchScreen.storyboard */; };
 		7C3E3E8A22D8DAEE005F9D85 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E3E8922D8DAEE005F9D85 /* Contact.swift */; };
 		7C3E3E8C22D8E005005F9D85 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E3E8B22D8E005005F9D85 /* ContactController.swift */; };
+		7C3E3E9122D8EB48005F9D85 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E3E9022D8EB48005F9D85 /* ContactListTableViewController.swift */; };
+		7C3E3E9422D8ECDB005F9D85 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E3E9322D8ECDB005F9D85 /* ContactTableViewCell.swift */; };
+		7C3E3E9622D8EE72005F9D85 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E3E9522D8EE72005F9D85 /* ContactDetailViewController.swift */; };
+		7C3E3E9A22D8F554005F9D85 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3E3E9922D8F554005F9D85 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		7C3E3E7D22D8DA3C005F9D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3E3E8922D8DAEE005F9D85 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		7C3E3E8B22D8E005005F9D85 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		7C3E3E9022D8EB48005F9D85 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
+		7C3E3E9322D8ECDB005F9D85 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		7C3E3E9522D8EE72005F9D85 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		7C3E3E9722D8F551005F9D85 /* Assessment5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Assessment5.entitlements; sourceTree = "<group>"; };
+		7C3E3E9922D8F554005F9D85 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3E3E9A22D8F554005F9D85 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				7C3E3E7022D8DA3B005F9D85 /* Assessment5 */,
 				7C3E3E6F22D8DA3B005F9D85 /* Products */,
+				7C3E3E9822D8F554005F9D85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,8 @@
 		7C3E3E7022D8DA3B005F9D85 /* Assessment5 */ = {
 			isa = PBXGroup;
 			children = (
+				7C3E3E9722D8F551005F9D85 /* Assessment5.entitlements */,
+				7C3E3E9222D8ECCA005F9D85 /* Views */,
 				7C3E3E8622D8DABC005F9D85 /* Controllers */,
 				7C3E3E8522D8DAAF005F9D85 /* Storyboard */,
 				7C3E3E8422D8DAA0005F9D85 /* Model */,
@@ -103,6 +116,8 @@
 		7C3E3E8722D8DAC1005F9D85 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C3E3E9022D8EB48005F9D85 /* ContactListTableViewController.swift */,
+				7C3E3E9522D8EE72005F9D85 /* ContactDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +128,22 @@
 				7C3E3E8B22D8E005005F9D85 /* ContactController.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		7C3E3E9222D8ECCA005F9D85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C3E3E9322D8ECDB005F9D85 /* ContactTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C3E3E9822D8F554005F9D85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C3E3E9922D8F554005F9D85 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +178,14 @@
 				TargetAttributes = {
 					7C3E3E6D22D8DA3B005F9D85 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -187,7 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C3E3E8A22D8DAEE005F9D85 /* Contact.swift in Sources */,
+				7C3E3E9422D8ECDB005F9D85 /* ContactTableViewCell.swift in Sources */,
 				7C3E3E7222D8DA3B005F9D85 /* AppDelegate.swift in Sources */,
+				7C3E3E9122D8EB48005F9D85 /* ContactListTableViewController.swift in Sources */,
+				7C3E3E9622D8EE72005F9D85 /* ContactDetailViewController.swift in Sources */,
 				7C3E3E8C22D8E005005F9D85 /* ContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Assessment5/Assessment5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2HLC2FMZN4;
 				INFOPLIST_FILE = "$(SRCROOT)/Assessment5/Resources/Info.plist";
@@ -352,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Assessment5/Assessment5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2HLC2FMZN4;
 				INFOPLIST_FILE = "$(SRCROOT)/Assessment5/Resources/Info.plist";
