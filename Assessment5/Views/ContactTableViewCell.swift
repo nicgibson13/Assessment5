@@ -10,8 +10,21 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
 
+    var contact: Contact? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    
+    func updateViews() {
+        guard let contact = contact else { return }
+        nameTextField.text = contact.name
+        phoneNumberTextField.text = "\(contact.phoneNumber)"
+        emailTextField.text = contact.email
+    }
     
 }

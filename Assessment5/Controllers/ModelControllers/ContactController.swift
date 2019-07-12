@@ -35,9 +35,9 @@ class ContactController {
                 return
             }
             // Make sure there is a record
-            guard let record = record,
-                // if there is a record, convert it into a contact
-                let contact = Contact(ckRecord: record) else { completion(nil) ; return }
+            guard let record = record else { completion (nil) ; return }
+            // if there is a record, convert it into a contact
+            guard let contact = Contact(ckRecord: record) else { completion(nil) ; return }
             // Add the contact to the source of truth
             self.contacts.append(contact)
             completion(contact)
@@ -67,7 +67,7 @@ class ContactController {
         }
     }
     // Update
-//    func updateContact(contact: Contact, withName name: String, phoneNumber: Int?, )
+    //    func updateContact(contact: Contact, withName name: String, phoneNumber: Int?, )
     func updateContacts(name: String, phoneNumber: Int?, email: String?, completion: @escaping (Bool) -> Void) {
         let newContact = Contact(name: name, phoneNumber: phoneNumber, email: email)
         let newRecord = CKRecord(contact: newContact)
@@ -83,7 +83,7 @@ class ContactController {
         }
         // 1. Add an operation that will (hopefully) update the records
         privateDB.add(operation)
-    
-    // Delete*
+        
+        // Delete*
     }
 }

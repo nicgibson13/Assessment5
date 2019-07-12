@@ -35,5 +35,6 @@ class ContactDetailViewController: UIViewController {
                 print("yay")
             }
         }
+        navigationController?.popViewController(animated: true)
     }
 }

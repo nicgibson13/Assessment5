@@ -12,7 +12,15 @@ class ContactListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchPosts()
+    }
+    
+    func fetchPosts() {
+        ContactController.sharedInstance.fetchAllContacts { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,9 +28,10 @@ class ContactListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as? ContactTableViewCell
+        let contact = ContactController.sharedInstance.contacts[indexPath.row]
+        cell?.contact = contact
+        return cell ?? UITableViewCell()
     }
 
     /*
